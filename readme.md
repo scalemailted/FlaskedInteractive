@@ -7,7 +7,6 @@
 **Play:** https://scalemailted.github.io/FlaskedInteractive/  
 **Code:** https://github.com/scalemailted/FlaskedInteractive
 
-> Put the provided screenshot in your repo at `assets/cover.png` (or update the path above).
 
 ---
 
