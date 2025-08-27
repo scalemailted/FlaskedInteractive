@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window planet huge">
+        <img src="assets/197293798.gif" alt="">
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img src="assets/spacecraft_static.gif" alt="">
+                <br>
+                <p>
+                    Status <b>OK</b>
+                    <br> Destination <b class="error">NOT SET</b>
+                </p>
+                <p id="message">
+                    > 1 message requires your attention
+                    <div id="buttons">
+                        <button onclick="displayMessage()">Click to view</button>
+                    </div>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <audio id="notification_sound" src="assets/sounds/notification.mp3"></audio>
+    <audio id="fly_sound" src="assets/sounds/spaceship_start.mp3"></audio>
+    <audio id="error_sound" src="assets/sounds/error.wav"></audio>
+
+
+    <script src="scripts/index.js">
+    </script>
+</body>
+
+</html>

@@ -1,54 +1,109 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flasked Interactive</title>
+  <meta name="description" content="A tiny HTML+CSS-first interactive story with light JS for state between scenes." />
 
-    <title>
-        Flasked
-    </title>
-    <link rel="stylesheet" href="styles/style.css">
+  <!-- Open Graph (nice link previews) -->
+  <meta property="og:title" content="Flasked Interactive" />
+  <meta property="og:description" content="A tiny HTML+CSS-first interactive story with light JS for state between scenes." />
+  <meta property="og:image" content="docs/flasked_intereactive.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #121821;
+      --text: #e7edf5;
+      --muted: #a9b3c0;
+      --accent: #00d1b2;
+      --accent-ink: #05221c;
+      --ring: rgba(0, 209, 178, 0.35);
+      --maxw: 880px;
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f9fc; --panel:#ffffff; --text:#0b1220; --muted:#5a6573; --accent:#0ea5e9; --accent-ink:#041924; --ring:rgba(14,165,233,.2); }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 800px at 20% -10%, #142233 0%, transparent 50%), var(--bg);
+      padding: 40px 16px;
+    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; }
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 8px; letter-spacing: .3px; }
+    .tagline { color: var(--muted); margin: 0; }
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.02);
+      padding: 20px;
+    }
+    figure { margin: 0 0 16px; }
+    .cover {
+      display: block; width: 100%; height: auto; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    }
+    .lead { font-size: 1.05rem; margin: 12px 0 18px; color: var(--text); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 6px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 600;
+      border: 1px solid transparent; transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:focus-visible { outline: 0; box-shadow: 0 0 0 4px var(--ring); }
+    .btn.primary { background: var(--accent); color: var(--accent-ink); }
+    .btn.primary:hover { transform: translateY(-1px); }
+    .btn.ghost   { color: var(--text); border-color: rgba(255,255,255,.12); background: transparent; }
+    .btn.ghost:hover { border-color: rgba(255,255,255,.25); transform: translateY(-1px); }
+    .howto { margin-top: 8px; color: var(--muted); }
+    ul { margin: 10px 0 0 20px; }
+    footer { color: var(--muted); text-align: center; margin: 28px 0 8px; font-size: .95rem; }
+  </style>
 </head>
-
 <body>
-    <div class="window planet huge">
-        <img src="assets/197293798.gif" alt="">
-    </div>
-    <div class="controls">
-        <div class="column left">
+  <div class="wrap">
+    <header>
+      <h1>Flasked Interactive</h1>
+      <p class="tagline">HTML + CSS first • light JS for glue &amp; state</p>
+    </header>
 
-        </div>
-        <div class="column mid">
-            <h1>
-                Control Panel
-            </h1>
-            <hr>
-            <div id="screen">
-                <img src="assets/spacecraft_static.gif" alt="">
-                <br>
-                <p>
-                    Status <b>OK</b>
-                    <br> Destination <b class="error">NOT SET</b>
-                </p>
-                <p id="message">
-                    > 1 message requires your attention
-                    <div id="buttons">
-                        <button onclick="displayMessage()">Click to view</button>
-                    </div>
-                </p>
+    <main class="card" role="main">
+      <figure>
+        <!-- update this path if your screenshot has a different name/location -->
+        <img class="cover" src="docs/flasked_intereactive.png" alt="Flasked Interactive — screenshot of the control panel and space scene" />
+      </figure>
 
-            </div>
-        </div>
-        <div class="column right">
+      <p class="lead">
+        A minimalist interactive story set at the edge of a black hole. Each scene is a plain HTML page styled as a retro
+        control panel. Prepare, explore, and decide whether to confront the anomaly—or escape.
+      </p>
 
-        </div>
-    </div>
-    <audio id="notification_sound" src="assets/sounds/notification.mp3"></audio>
-    <audio id="fly_sound" src="assets/sounds/spaceship_start.mp3"></audio>
-    <audio id="error_sound" src="assets/sounds/error.wav"></audio>
+      <div class="actions">
+        <!-- If your game lives at the repo root, change href to './index.html' instead -->
+        <a class="btn primary" href="./game/" aria-label="Play Flasked Interactive now">▶ Play</a>
+        <a class="btn ghost" href="https://github.com/scalemailted/FlaskedInteractive" target="_blank" rel="noopener">View Code</a>
+      </div>
 
+      <div class="howto">
+        <strong>How to play:</strong>
+        <ul>
+          <li>Click on-screen buttons to make choices and move between scenes.</li>
+          <li>Watch <em>HP</em> and <em>AP</em> in the inventory panel; they’re passed via the URL between pages.</li>
+          <li>Use <em>Travel</em> to rest or load weapons before approaching hazards.</li>
+        </ul>
+      </div>
+    </main>
 
-    <script src="scripts/index.js">
-    </script>
+    <footer>
+      Built with just HTML, CSS, and tiny bits of JavaScript. No frameworks.
+    </footer>
+  </div>
 </body>
-
 </html>
