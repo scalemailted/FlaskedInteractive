@@ -75,4 +75,15 @@ The game tracks lightweight stats—**HP** and **AP**—and passes them from pag
 
 ---
 
+**Repo layout**
+
+```
+docs/            # screenshots, promo image (e.g., docs/castle_maven.png)
+game/            # all scene HTML, assets/, styles/, scripts/
+index.html       # redirect or landing page to /game/index.html (optional)
+readme.md
+```
+
+---
+
 
