@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window eventHorizon">
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft.gif" alt="">
+                <br>
+                <p>
+                    <b class="error">WARNING: DANGEROUSLY HIGH RADIATION</b>
+                    <br> Location
+                    <b>Event Horizon</b>
+                </p>
+                <p id="message">
+                    > You see some flashing lights to your right while traveling!
+
+                    <div id="buttons">
+                        <button onclick=aibeing()>Manuever to your right!</button>
+                        <button onclick=goBack()>Return</button>
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <audio id="magic_sound" src="assets/sounds/magic.mp3"></audio>
+    <script>
+        inventory_frame.src += location.search;
+        var queryString = new URLSearchParams(location.search);
+
+        function aibeing() {
+            window.location.href = "aibeing.html?" + queryString;
+        }
+
+        function goBack() {
+            window.location.href = "arrived.html?" + queryString;
+        }
+    </script>
+</body>
+
+</html>

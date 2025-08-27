@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Flasked</title>
+</head>
+
+<body class="inventory">
+    <div class="inventory">
+        <table>
+            <tr>
+                <th> <img src="assets/health.png" height=36 width=36 alt=""> </th>
+                <th> <img src="assets/missile.png" height=36 width=36 alt=""> </th>
+            </tr>
+            <tr>
+                <td id='hp'>0</td>
+                <td id='ap'>0</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var queryString = new URLSearchParams(location.search);
+        hp.innerText = queryString.get("hp");
+        ap.innerText = queryString.get("ap");
+    </script>
+</body>
+
+</html>

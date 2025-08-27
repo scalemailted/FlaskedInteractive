@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <div class="window singularity huge">
+        <img id="singularity" src="assets/singularity.gif" alt="">
+
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft.gif" alt="">
+                <br>
+                <p>
+                    <b class="error">WARNING: EXTREME GRAVITY</b>
+                    <br> Location
+                    <b>Singularity</b>
+                </p>
+                <p id="message">
+                    > Maybe try to destroy the singularity! Remember, if your attack isn't strong enough, you might end up opening the wormhole instead!
+                    <div id="buttons">
+                        <button onclick=attack()>Launch your attack!</button>
+                        <button onclick=goBack()>Return</button>
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <audio id="explosion_sound" src="assets/sounds/explosion.mp3"></audio>
+    <script src="scripts/singularity.js"></script>
+</body>
+
+</html>

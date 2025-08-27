@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window accretionDisk">
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft.gif" alt="">
+                <br>
+                <p>
+                    <b class="error">WARNING: DANGEROUSLY HIGH RADIATION</b>
+                    <br> Location
+                    <b>Accretion Disk</b>
+                </p>
+                <p id="message">
+                    > There is a weird looking purple liquid flowing through the disk
+                    <div id="buttons">
+                        <button onclick=increaseHP()>Dive into the suspicious liquid!</button>
+                        <button onclick=goBack()>Return</button>
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <audio id="magic_sound" src="assets/sounds/magic.mp3"></audio>
+    <script src="scripts/accretiondisk.js">
+    </script>
+</body>
+
+</html>

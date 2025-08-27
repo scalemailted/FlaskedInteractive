@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window lightspeed">
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft.gif" alt="">
+                <br>
+                <p>
+                    Status <b>OK</b>
+                    <br> Destination <b> SET </b>
+                    <br> Time Remaining:
+                    <b class="error" id="time">0 hrs</b>
+                </p>
+                <p id="message">
+                    > Traveling at max speed!
+                    <br> > Make sure to load your weapons for the fight!
+                    <br> > However, you must get enough sleep too!
+                    <br>
+                    <div id="buttons">
+                        <button onclick=loadWeapon()>Load Weapon</button>
+                        <button onclick=rest()>Rest</button>
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <script src="scripts/travel.js">
+    </script>
+</body>
+
+</html>

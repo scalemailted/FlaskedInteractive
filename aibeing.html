@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window aibeing huge">
+        <img id="being" src="assets/mother_flask.gif" alt="">
+
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft.gif" alt="">
+                <br>
+                <p>
+                    <b class="error">WARNING: UNKNOWN SPECIES</b>
+                    <br> Location
+                    <b>Event Horizon</b>
+                </p>
+                <p id="message">
+                    > The being seems to be in a state of meditation. Perhaps it's a flask who leaked out of the wormhole!
+                    <div id="buttons">
+                        <button onclick=attack()>Attack the being!</button>
+                        <button onclick=goBack()>Return</button>
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <audio id="explosion_sound" src="assets/sounds/explosion.mp3"></audio>
+    <script src="scripts/aibeing.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="icon" href="assets/mother_flask.gif" type="image/icon type">
+
+    <title>
+        Flasked
+    </title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="window planet huge">
+        <img src="assets/4109103003.gif" alt="">
+    </div>
+    <div class="controls">
+        <div class="column left">
+
+        </div>
+        <div class="column mid">
+            <h1>
+                Control Panel
+            </h1>
+            <hr>
+            <div id="screen">
+                <img id="spacecraft" src="assets/spacecraft_static.gif" alt="">
+                <br>
+                <p>
+                    Status <b>OK</b>
+                    <br> Destination <b> SET </b>
+                    <br> Time Remaining:
+                    <b class="error" id="time">Arrived</b>
+                </p>
+                <p id="message">
+                    > We have come to a stop!
+                    <div id="buttons">
+                        <button onclick=eventHorizon()>Enter Event Horizon</button>
+                        <button onclick=accretionDisk()>Explore Accretion Disk</button>
+                        <button onclick=singularity()>Dive into Singularity</button>
+
+                    </div>
+                    <br>
+                    <br>
+                    <iframe id="inventory_frame" src="inventory.html" frameborder="0"></iframe>
+                </p>
+
+            </div>
+        </div>
+        <div class="column right">
+
+        </div>
+    </div>
+    <script>
+        inventory_frame.src += location.search;
+        var queryString = new URLSearchParams(location.search);
+
+        function accretionDisk() {
+            window.location.href = "accretiondisk.html?" + queryString;
+        }
+
+        function eventHorizon() {
+            window.location.href = "eventhorizon.html?" + queryString;
+        }
+
+        function singularity() {
+            window.location.href = "singularity.html?" + queryString;
+        }
+    </script>
+</body>
+
+</html>
