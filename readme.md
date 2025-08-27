@@ -4,7 +4,7 @@
 
 *A tiny, scene-based space adventure built to showcase **HTML + CSS first**, with just enough JavaScript to glue things together and persist state between pages.*
 
-**Play:** https://scalemailted.github.io/FlaskedInteractive/game/  
+**Play:** https://scalemailted.github.io/FlaskedInteractive/  
 **Code:** https://github.com/scalemailted/FlaskedInteractive
 
 > Put the provided screenshot in your repo at `assets/cover.png` (or update the path above).
