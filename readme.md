@@ -2,7 +2,7 @@
 
 ![Flasked Interactive – screenshot](https://github.com/scalemailted/FlaskedInteractive/blob/main/docs/flasked_interctive.png)
 
-*A tiny, scene-based space adventure built to showcase **HTML + CSS first**, with just enough JavaScript to glue things together and persist state between pages.*
+*A tiny, scene-based space adventure built to showcase **HTML + CSS**, with just enough JavaScript to glue things together and persist state between pages.*
 
 **Play:** https://scalemailted.github.io/FlaskedInteractive/  
 **Code:** https://github.com/scalemailted/FlaskedInteractive
