@@ -1,6 +1,6 @@
 # Flasked Interactive
 
-![Flasked Interactive – screenshot](docs/flasked_intereactive.png)
+![Flasked Interactive – screenshot](https://github.com/scalemailted/FlaskedInteractive/blob/main/docs/flasked_interctive.png)
 
 *A tiny, scene-based space adventure built to showcase **HTML + CSS first**, with just enough JavaScript to glue things together and persist state between pages.*
 
